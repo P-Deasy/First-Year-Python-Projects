@@ -1,14 +1,9 @@
-# Script Name: functions.py
-# Author: Paul Deasy 118312303
-
-# template for calling functions in another file
-
-
-def print_function():
-    return "I'm in another file :)"
-
-
 def to_english(n=0):
+    '''
+    Takes a positive or negative integer value
+    ‘n’ and that returns a string containing the number expressed in English words.
+    (From - to + 999)
+    '''
     n = str(n)
     # Created dictionaries to assign names to the numbers
     num1 = {'1': 'one', '2': 'two', '3': 'three', '4': 'four', '5': 'five', '6': 'six', '7': 'seven', '8': 'eight', '9'
@@ -54,6 +49,9 @@ def to_english(n=0):
 
 
 def sort_a_list(s):
+    '''
+    Takes a list of number or single characters and returns a sorted list
+    '''
     # Set the start of all the lists
     newlist = [0]
     minus_list = ['0']
@@ -108,6 +106,12 @@ def sort_a_list(s):
 
 
 def ascii_difference(m, n):
+    '''
+    Takes 2 lists 'm' and 'n' and
+    will return two lists. The first returned list is the combined ascii value of the
+    elements @ the same index number, the second list is the absolute ascii difference
+    between each element @ the same index number
+    '''
     # Set up our empty lists and accumulators
     list1 = []
     list2 = []
