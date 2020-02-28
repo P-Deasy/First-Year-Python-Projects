@@ -1,14 +1,18 @@
-# ScriptName: functions.py
-# Author: Paul Deasy 118312303
-
-# template for calling functions in another file
-
-
-def print_function():
-    print("I'm in another file :)")
-
-
 def while_loop(max_number=10, even=False, factorial=False):
+    '''
+    Contains a while loop that loops from 1 to
+    n, where n is a positive number (passed as parameter - max_number), saving the number in
+    a list on each loop. The function will return the list of all numbers.
+    If a negative number is passed to
+    while_loop(max_number), the list shall return the numbers from 1 to the negative number
+    It will also add the numbers as they gousing an accumulator and add this value as the 
+    last value in the list
+    Irrespective of the value of the max_number parameter, the output list will never go 
+    higher than 12, or lower than -12
+    It takes a second parameter (even), aboolean value which when True only adds 
+    the even numbers to the list
+    If boolean is True it will add the factorial value of the last number in the while loop as the last parameter
+    '''
     n = 1
     a = 0
     b = 1
