@@ -1,38 +1,7 @@
-# ScriptName: functions.py
-# Author: Paul Deasy 118312303
-
-# template for calling functions in another file
-
-
-def print_function():
-    print("I'm in another file :)")
-
-
-#def count(list, value):
-#    '''
- #   function - count how many times <value> occurs in <list>
-  #  :param list: - <list> input
-   # :param value: - <value> to search for
-    #:return:
-    #'''
-    # set counter
- #   i = 0
-    # accumulator to count how many times <value> occurs
-    # set to zero to cover no <value> in <list>
-  #  num_values = 0
-    # loop over the length of the <list>
-   # while i < len(list):
-        # if <value> and <list> index i are the same
-    #    if list[i] == value:
-            # increment the accumulator
-     #       num_values += 1
-        # increment the counter
-      #  i += 1
-    # return how many times <value> occurs in <list>
-    #return num_values
-
-
 def count(list, value):
+    '''
+    return the number of times value occurs in list
+    '''
     i = 0
     number = 0
     # Added str so function could accept numbers too
@@ -46,6 +15,10 @@ def count(list, value):
 
 
 def index(list, value):
+    '''
+    Returns the first index that value occurs in list.
+    Returns -1 if the value does not occur in the list.
+    '''
     i = 0
     while i < len(list):
         if list[i] == value:
@@ -55,6 +28,10 @@ def index(list, value):
 
 
 def get_value(list, index):
+    '''
+    Returns the value that occurs in the list at
+    index
+    '''
     i = 0
     while i < len(list):
         if list[i] == list[index]:
@@ -63,8 +40,11 @@ def get_value(list, index):
         i += 1
 
 
-# Had to change list variable to List so list() function would work
 def insert(List, index, value):
+    '''
+    Returns list, after you have added value at
+    index
+    '''
     # Added str() argument so integers etc could be used
     List = list(str(List))
     i = 0
@@ -80,6 +60,9 @@ def insert(List, index, value):
 
 
 def value_in_list(list, value):
+    '''
+    Returns True or False if value occurs in list
+    '''
     for i in list:
         if i == value:
             return True
@@ -88,6 +71,10 @@ def value_in_list(list, value):
 
 
 def concat(list1, list2):
+    '''
+    Returns a new list, which is a combination of
+    list1 and list2
+    '''
     list1 = str(list1)
     list2 = str(list2)
     # Use .join to join two lists
@@ -97,6 +84,10 @@ def concat(list1, list2):
 
 
 def remove(value, List):
+    '''
+    Returns list with the first occurrence of value
+    removed from list
+    '''
     i = 0
     List = list(str(List))
     while i < len(List):
